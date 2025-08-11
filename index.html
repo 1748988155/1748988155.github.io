@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dang Shi Yue</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <!-- 顶部导航 -->
+    <header class="p-6 border-b border-gray-700">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">Dang Shi Yue</h1>
+            <nav class="space-x-4">
+                <a href="#about" class="hover:text-yellow-400">关于</a>
+                <a href="#projects" class="hover:text-yellow-400">项目</a>
+                <a href="#contact" class="hover:text-yellow-400">联系</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 关于我 -->
+    <section id="about" class="max-w-5xl mx-auto p-6 text-center">
+        <h2 class="text-3xl font-bold mb-4">你好，我是党世岳 👋</h2>
+        <p class="text-gray-300 text-lg leading-relaxed">
+            技术爱好者 | NAS 运维 | 硬件维修 | AI 学习者  
+            喜欢折腾网络、服务器和各种开发板项目。
+        </p>
+    </section>
+
+    <!-- 项目展示 -->
+    <section id="projects" class="max-w-5xl mx-auto p-6">
+        <h2 class="text-2xl font-bold mb-4">我的项目</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="p-4 border border-gray-700 rounded-lg hover:border-yellow-400 transition">
+                <h3 class="text-xl font-semibold mb-2">NAS 运维笔记</h3>
+                <p class="text-gray-400">记录公司和个人 NAS 的运维经验。</p>
+            </div>
+            <div class="p-4 border border-gray-700 rounded-lg hover:border-yellow-400 transition">
+                <h3 class="text-xl font-semibold mb-2">AI 机器人实验</h3>
+                <p class="text-gray-400">用树莓派/开发板构建会说话的“贾维斯”。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="max-w-5xl mx-auto p-6 text-center">
+        <h2 class="text-2xl font-bold mb-4">联系我</h2>
+        <p class="text-gray-300 mb-4">📧 <a href="mailto:me@dangshiyue.xyz" class="text-yellow-400 hover:underline">me@dangshiyue.xyz</a></p>
+        <div class="flex justify-center space-x-4">
+            <a href="https://github.com/" class="hover:text-yellow-400">GitHub</a>
+            <a href="https://t.me/" class="hover:text-yellow-400">Telegram</a>
+            <a href="https://bilibili.com/" class="hover:text-yellow-400">B站</a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="p-6 border-t border-gray-700 text-center text-gray-500 text-sm">
+        © 2025 DangShiYue.xyz | Powered by Tailwind CSS
+    </footer>
+</body>
+</html>
