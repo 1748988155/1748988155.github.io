@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <script src="https://v.1nb.xyz/DrJMKRQF"></script>
+    <script src="https://c.lyx8.cc/KOqCubbt"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dang Shi Yue</title>
@@ -59,6 +59,42 @@
     <footer class="p-6 border-t border-gray-700 text-center text-gray-500 text-sm">
         © 2025 DangShiYue.xyz | Powered by Tailwind CSS
     </footer>
+    
+    <!-- 新增：Cookie 设置与读取脚本 -->
+    <script>
+        // 页面加载完成后执行
+        document.addEventListener('DOMContentLoaded', function() {
+            // 定义Cookie名称
+            const cookieName = 'visitor';
+            
+            // 辅助函数：获取特定Cookie的值
+            function getCookie(name) {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) return parts.pop().split(';').shift();
+                return null;
+            }
+            
+            // 检查是否已有 visitor Cookie
+            const visitorCookie = getCookie(cookieName);
+            
+            if (!visitorCookie) {
+                // 首次访问，设置Cookie
+                const expiryDate = new Date();
+                expiryDate.setDate(expiryDate.getDate() + 30); // 有效期30天
+                
+                // 构建Cookie字符串，包含必要的属性
+                const cookieString = `${cookieName}=visited_${Date.now()}; expires=${expiryDate.toUTCString()}; path=/; SameSite=Lax`;
+                
+                // 设置Cookie
+                document.cookie = cookieString;
+                console.log('[本地Cookie] 欢迎新访客！已设置访问标识。');
+            } else {
+                // 非首次访问
+                console.log('[本地Cookie] 欢迎回来！您的访问标识是：', visitorCookie);
+            }
+        });
+    </script>
 </body>
 </html>
 
